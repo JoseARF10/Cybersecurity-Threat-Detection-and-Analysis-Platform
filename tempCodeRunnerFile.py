@@ -1,0 +1,1 @@
+csv_output = os.path.join('data/', filename.replace('.parquet', '.csv'))
