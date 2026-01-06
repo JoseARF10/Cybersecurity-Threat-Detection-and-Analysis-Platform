@@ -1,28 +1,19 @@
-# Virtual environment
+# Virtual environments
 .venv/
 venv/
 env/
 
-# Data files (large CSVs and parquet files)
-data/*.csv
-data/csv_files/
-data/parquet_files/
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
-# Python
+# Python caches and build artifacts
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
 *.egg-info/
 dist/
 build/
+pip-wheel-metadata/
 
-# IDE
+# IDE/editor
 .vscode/
 .idea/
 *.swp
@@ -32,10 +23,35 @@ build/
 .DS_Store
 Thumbs.db
 
-# Environment variables
+# Environment files
 .env
-.env.local
+.env.*
 
-# Models (if they're large)
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Temporary / tooling
+tempCodeRunnerFile.py
+*.log
+.pytest_cache/
+
+# Data and large datasets (do NOT commit raw datasets)
+data/
+data/*.csv
+data/*.parquet
+data/csv_files/
+data/parquet_files/
+
+# Models and serialized artifacts
+models/
 models/*.pkl
 models/*.joblib
+models/*.pickle
+
+# Database files
+*.sqlite3
+*.db
+
+# Git LFS placeholder (if using LFS)
+.gitattributes
